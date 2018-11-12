@@ -4,6 +4,7 @@
 
 const PLAYERS = ['X', 'O'];
 let grid = [];
+let turn = null;
 
 /**
  * Onload, set up event listeners
@@ -11,11 +12,12 @@ let grid = [];
 window.onload = () => {
   resetGrid();
   drawGrid(grid);
+  nextTurn();
 };
 
 
 /**
- * Function to create the board
+ * Function to draw the board
  */
 const drawGrid = (grid) => {
   const tableEl = document.querySelector('table');
@@ -43,6 +45,19 @@ const drawGrid = (grid) => {
     tableEl.appendChild(rowEl);
   });
 };
+
+/**
+ * Function to track turn order
+ */
+const nextTurn = () => {
+  if (turn === null) {
+    // randomize the first turn
+    turn = Math.floor(Math.random() * 2);
+  } else {
+    // switch players
+    turn = turn === 0 ? 1 : 0;
+  }
+}
 
 /**
  * Function to reset grid
