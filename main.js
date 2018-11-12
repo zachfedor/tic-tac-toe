@@ -9,8 +9,8 @@ let grid = [];
  * Onload, set up event listeners
  */
 window.onload = () => {
-  console.log('onload');
-  // get button, add event listener to run init function
+  resetGrid();
+  drawGrid(grid);
 };
 
 
@@ -48,7 +48,11 @@ const drawGrid = (grid) => {
  * Function to reset grid
  */
 const resetGrid = () => {
-  console.log('reset grid');
+  grid = [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
+  ];
 };
 
 /**
@@ -56,16 +60,21 @@ const resetGrid = () => {
  */
 const addSymbol = (symbol, coordinates) => {
   console.log('add symbol:', symbol, coordinates);
-  // if space is not empty, return
-  // else, add symbol to grid
-  // draw grid
+
+  if (isEmpty(coordinates)) {
+    // if space is empty, add symbol to grid
+    grid[coordinates[1]][coordinates[0]] = symbol;
+    // redraw grid
+    drawGrid(grid);
+  }
 };
 
 /**
  * Function to check if square is empty
  */
 const isEmpty = (coordinates) => {
-  console.log('is empty:', coordinates);
+  let symbol = grid[coordinates[1]][coordinates[0]];
+  return symbol === null;
 };
 
 /**
