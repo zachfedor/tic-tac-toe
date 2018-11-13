@@ -1,0 +1,49 @@
+body {
+  color: #444;
+  font-family: monospace;
+  font-size: 5vw;
+  text-align: center;
+}
+
+main {
+  margin: 10vh auto;
+  width: 80vw;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+td {
+  width: 20vh;
+  height: 20vh;
+  vertical-align: middle;
+  cursor: default;
+}
+td.empty {
+  cursor: pointer;
+}
+
+td + td {
+  border-left: 3px solid #444;
+}
+
+tr + tr td {
+  border-top: 3px solid #444;
+}
+
+h1 {
+  margin: 2rem 0 0;
+  font-size: 4rem;
+}
+
+button {
+  background: none;
+  border: 3px solid #444;
+  color: #444;
+  font-family: monospace;
+  font-size: 2rem;
+  cursor: pointer;
+}
+    
