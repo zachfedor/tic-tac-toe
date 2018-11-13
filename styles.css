@@ -1,7 +1,7 @@
 body {
   color: #444;
   font-family: monospace;
-  font-size: 5vw;
+  font-size: 10vh;
   text-align: center;
 }
 
@@ -16,13 +16,20 @@ table {
 }
 
 td {
-  width: 20vh;
+  cursor: default;
   height: 20vh;
   vertical-align: middle;
-  cursor: default;
+  width: 20vh;
 }
+
 td.empty {
   cursor: pointer;
+}
+
+td.empty:hover,
+td.empty:focus {
+  background: lightblue;
+  outline: none;
 }
 
 td + td {
@@ -33,17 +40,29 @@ tr + tr td {
   border-top: 3px solid #444;
 }
 
+td.win {
+  background: lightgreen;
+}
+
 h1 {
+  font-size: 3rem;
   margin: 2rem 0 0;
-  font-size: 4rem;
 }
 
 button {
   background: none;
   border: 3px solid #444;
   color: #444;
+  cursor: pointer;
   font-family: monospace;
   font-size: 2rem;
-  cursor: pointer;
+  padding: 0.5rem 2rem;
+}
+
+button:hover,
+button:focus {
+  color: lightblue;
+  border-color: lightblue;
+  outline: none;
 }
     
