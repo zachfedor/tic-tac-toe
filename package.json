@@ -1,0 +1,23 @@
+{
+  "name": "tic-tac-toe",
+  "version": "0.0.1",
+  "description": "A classic game of wits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachfedor/tic-tac-toe.git"
+  },
+  "author": "Zach Fedor <zachfedor@gmail.com> (http://zachfedor.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zachfedor/tic-tac-toe/issues"
+  },
+  "homepage": "https://github.com/zachfedor/tic-tac-toe#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.3.1"
+  }
+}

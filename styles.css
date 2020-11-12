@@ -1,13 +1,29 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 body {
   color: #444;
   font-family: monospace;
   font-size: 10vh;
   text-align: center;
+  padding: 0;
 }
 
 main {
-  margin: 10vh auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: 100vh;
   width: 80vw;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 2rem 0 0;
 }
 
 table {
@@ -42,11 +58,6 @@ tr + tr td {
 
 td.win {
   background: lightgreen;
-}
-
-h1 {
-  font-size: 3rem;
-  margin: 2rem 0 0;
 }
 
 button {
